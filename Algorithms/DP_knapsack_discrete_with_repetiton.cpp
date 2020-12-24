@@ -28,7 +28,7 @@ Capacity is the the capacity of the bag
 
 IDEA : Store results for all capacities of the bag from 1 to capacity */
 
-int T[u+1]={0};
+int T[capacity+1]={0};
 int knapsack(w,v,capacity,w_length)
 {
    for(int u=1;u<capacity+1;u++) 
