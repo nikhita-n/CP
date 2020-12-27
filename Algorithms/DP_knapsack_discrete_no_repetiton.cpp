@@ -1,6 +1,6 @@
 /* w=array of weight of each item
    v=array of value of each item
-   W=capacity of bag
+   W=capacity of bag in terms of weight
    n=number of items to choose from */
 
 /* Recursive algorithm 
