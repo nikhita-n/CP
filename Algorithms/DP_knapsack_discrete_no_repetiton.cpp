@@ -44,9 +44,9 @@ IDEA : Store results for all capacities of the bag from 1 to capacity */
 int T[capacity+1][n+1]={0};
 int knapsack(w,v,capacity,n,i)
 {
-   for(int i=0;i<n;i++)
+   for(int i=0;i<n+1;i++)
     T[0][i]=0;
-   for(int u=0;i<=capacity+1;i++)
+   for(int u=0;u<capacity+1;u++)
     T[u][0]=0;
 
    for(int i=1;i<n+1;i++)
@@ -61,9 +61,9 @@ int knapsack(w,v,capacity,n,i)
 int T[capacity+1][2]={0};
 int knapsack(w,v,capacity,n,i)
 {
-   for(int i=0;i<n;i++)
+   for(int i=0;i<2;i++)
     T[0][i]=0;
-   for(int u=0;i<=capacity+1;i++)
+   for(int u=0;u<capacity+1;u++)
     T[u][0]=0;
 
    for(int i=1;i<n+1;i++)
@@ -74,3 +74,7 @@ int knapsack(w,v,capacity,n,i)
     }
     return T[capacity][1];
 }
+
+/*Check boost here:
+https://stackoverflow.com/questions/32685540/why-cant-i-compile-an-unordered-map-with-a-pair-as-key
+https://www.boost.org/doc/libs/1_75_0/doc/html/hash/combine.html*/
