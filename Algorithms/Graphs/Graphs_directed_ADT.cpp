@@ -16,7 +16,7 @@ public class Digraph {
 }G;
 void Digraph:: addEdge(int  v,int w)
 {
-    adj[v].add(w);
+    adj[v].push_back(w);
 }
 void Digraph:: Digraph(int V)
 {
