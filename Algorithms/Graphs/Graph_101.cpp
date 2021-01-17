@@ -2,6 +2,7 @@
 adjacency matrix    V^2     1           1                       V
 adjacency lists     E+V     1           degree(v)               degree(v)
 */
+
 /*Graph challenges
     1)Is a graph bipartite? 
       is it possible to divide the graphs into two sets of vertices such that  every edge connects a vertex

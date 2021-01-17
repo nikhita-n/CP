@@ -1,0 +1,8 @@
+Algorithm           |   restriction         |   typical case    |   worst case  |   Extra space
+                    |                       |                   |               |                       
+topological sort    |   no directed cycles  |   E+V             |   E+V         |   V
+Dijkstra(bin heap)  |   no negative weights |   ElogV           |   ElogV       |   V
+Bellman-Ford        |   no negative cycles  |   EV              |   EV          |   V 
+Bellman-ford(queue) |   no negative cycles  |   E+V             |   EV          |   V
+
+negative cycles makes the problem intractable
