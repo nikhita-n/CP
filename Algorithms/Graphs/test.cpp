@@ -1,13 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+class ST{
+    public:
+    int Ab=*NULL;
+};
 int main()
 {
-    string *check[5];
-    check=new string[10];
-    for(int i=0;i<10;i++)
-        check[i]=i;
-    for(int i=0;i<10;i++)
-        cout<<check[i]<<" ";
+    ST *A=new ST();
+    //ST<char> B;
+    cout<<A->Ab;
     return 0;
-
 }

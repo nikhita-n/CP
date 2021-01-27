@@ -4,7 +4,7 @@
     3)By default std::vector is the container used inside
     4)cost of insertion/deletion is logarithmic
     5)std::priority_queue is implemented using std::make_heap,std::push_heap,std::pop_heap
-    6)MAX heap, parents always greater than chilren
+    6)MAX heap, parents always greater than chilren, pq.top() returns max element
  */
 
 template <class T, class Container = vector<T>/*vector is by default*/,class Compare = less<typename Container::value_type>> //less is by default;less is same as less than, usually returns less than comparison of the value type stored in the container;compare needs a boolean value whether 'a' needs to come before 'b' or not during comparison
@@ -25,3 +25,15 @@ class priority_queue{
     void pop();
 
 };
+
+"MIN HEAP FOR PRIMITIVE TYPES"
+    priority_queue <int, vector<int>, greater<int> > pq;
+    
+"FOR MIN HEAP - USER DEFINED class"
+struct myComparator{    //comparison fn
+    int operator() (const Point& p1, const Point& p2)
+    {
+        return p1.getX() > p2.getX();
+    }
+};
+priority_queue <Point, vector<Point>, myComparator > pq //Point is a userdefined class
