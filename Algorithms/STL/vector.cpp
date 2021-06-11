@@ -14,6 +14,10 @@
    "initialising 2D vector"
    vector<vector<int>> a(r,vector<int>(c,value)); // r is the num of rows, c is the num of columns and value is the value u wnat them to take
    vector<vector<int>> a(r,vector<int>c; //value not given
+                         
+   "assigning values to an already declared vector"
+    vector<int> a;
+    a.assign(size,value) //size is the number of elements you want with the value
 
    "METHODS"
       -push_back() -pushes from the push_back
