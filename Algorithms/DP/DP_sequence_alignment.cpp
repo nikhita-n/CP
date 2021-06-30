@@ -45,21 +45,24 @@ int sequence_alignment(int A[],int B[],int i,int j) //initially i=n and j=m, i a
 //OPTIMIZED only for cost
 //To reduce space complexity to linear, O(min(n,m))
 //say n<m
-int T[n][2]={MAX}
-int sequence_alignment(int A[],int B[],int i,int j) //initially i=n and j=m, i and j denote the num of characters in the comparison
-{
-     for(int i=0;i<n+1;i++)
-     T[i][0]=i;
-     for(int j=0;j<2;j++)
-     T[0][j]=j;
+    int minDistance(string word1, string word2) {
+    int T[word1.length()+1][2];
+     for(int i=0;i<word1.length()+1;i++)
+        T[i][0]=i;
+     //for(int j=0;j<2;j++)
+        T[0][1]=1;
      int diff;
-     for(int i=1;i<n+1;i++)
-        for(int j=1;j<m+1;j++)
+     for(int j=1;j<word2.length()+1;j++)
+     {  
+        for(int i=0;i<word1.length()+1;i++)
         {
-            if(A[i-1]!=B[j-1]) diff=1;
+            if(i==0)
+                T[i][j%2]=j;
+            else{
+            if(word1[i-1]!=word2[j-1]) diff=1;
             else diff=0;
-            T[i][1]=min(T[i-1][1]+1,T[i][0]+1,T[i-1][0]+diff);
+            T[i][j%2]=min(min(T[i-1][j%2]+1,T[i][(j-1)%2]+1),T[i-1][(j-1)%2]+diff);}
         }
+     }
 
-    return T[n][1];
-}
+    return T[word1.length()][word2.length()%2];
